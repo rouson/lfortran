@@ -3,7 +3,7 @@ name: Exhaustive checks
 on:
   push:
     branches:
-      - main
+      - updateformaltesting
     tags:
       - 'v*'
   pull_request:
