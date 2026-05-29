@@ -245,13 +245,13 @@ time_section "🧪 Testing smart-pointers" '
 '
 
 time_section "🧪 Testing Formal" '
-  git clone https://github.com/certik/formal.git
+  git clone https://github.com/berkeleylab/formal.git
   cd formal
   export PATH="$(pwd)/../src/bin:$PATH"
   micromamba install -c conda-forge fpm
 
-  git checkout -t origin/lf1
-  assert_git_commit 671ab24c3d639b1a2fedd27f727e96dadf404c5c
+  git checkout -t origin/0.2.0
+  assert_git_commit 94b9cf79506f1658900369d6a83d945d3582ef2d
   fpm test --compiler=lfortran --flag --cpp --flag --realloc-lhs-arrays
   rm -rf build
   fpm test --compiler=lfortran --flag --cpp --flag --separate-compilation --flag --realloc-lhs-arrays
